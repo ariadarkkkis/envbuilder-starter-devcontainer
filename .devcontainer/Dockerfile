@@ -17,7 +17,7 @@ RUN apt-get install -y redis-server=5*
 RUN wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb && \
     dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb && \
     wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | apt-key add - && \
-    echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/5.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-5.0.list && \
+    echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-5.0.list && \
     apt-get update && \
     apt-get install -y mongodb-org=5*
 
