@@ -1,5 +1,11 @@
 {
     "build": {
         "dockerfile": "Dockerfile"
+    },
+    "forwardPorts": [3306, 27017, 6379, 5000, 5001, 8090],
+    "portsAttributes": {
+        "5001": {
+            "protocol": "https"
+        }
     }
 }
