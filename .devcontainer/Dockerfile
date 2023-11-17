@@ -1,4 +1,4 @@
-ARG VARIANT=7.0
+ARG VARIANT=7.0-focal
 FROM mcr.microsoft.com/devcontainers/dotnet:0-${VARIANT}
 
 # Prevent 'Warning: apt-key output should not be parsed (stdout is not a terminal)'
