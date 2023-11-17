@@ -22,11 +22,10 @@ RUN wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1
     apt-get install -y mongodb-org=5*
 
 # Install MariaDB 10.11.2
-
-RUN apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc' && \
-    add-apt-repository 'deb [arch=amd64,arm64,ppc64el] https://mirror.netcologne.de/mariadb/repo/10.11/ubuntu jammy main' && \
-    apt update && \
-    apt install -y mariadb-server-10.11
+RUN curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version=10.11
+# RUN apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc' && \
+#     add-apt-repository 'deb [arch=amd64,arm64,ppc64el] https://mirror.netcologne.de/mariadb/repo/10.11/ubuntu jammy main' && \
+RUN apt update && apt install -y mariadb-server
 
 # install NodeJS 18.x
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
