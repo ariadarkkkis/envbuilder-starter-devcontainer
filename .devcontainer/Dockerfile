@@ -6,7 +6,7 @@ ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 
 # Install required packages
 RUN apt-get update -yq
-RUN apt-get install curl gnupg libgdiplus sudo libssl-dev software-properties-common dirmngr ca-certificates apt-transport-https -yq
+RUN apt-get install curl gnupg libgdiplus sudo libssl-dev software-properties-common dirmngr ca-certificates apt-transport-https telnet -yq
 RUN DEBIAN_FRONTEND=noninteractive TZ=Asia/Tehran apt-get -y install tzdata
 
 # Install Redis 5
