@@ -26,7 +26,7 @@ RUN apt-get install -y software-properties-common && \
     apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc' && \
     add-apt-repository 'deb [arch=amd64,arm64,ppc64el] https://mirror.netcologne.de/mariadb/repo/10.11/ubuntu focal main' && \
     apt update && \
-    apt install -y mariadb-server-10.11*
+    apt install -y mariadb-server-10.11
 
 # install NodeJS 18.x
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
